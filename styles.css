@@ -1,0 +1,84 @@
+body {
+  background-color: #929292;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+#menu-button-container {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 10;
+}
+
+#menu-button {
+  width: 50px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+#menu-button::before,
+#menu-button::after {
+  content: "";
+  width: 50px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 3px;
+  position: absolute;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#menu-button::before {
+  transform: translateY(-12px);
+}
+
+#menu-button::after {
+  transform: translateY(12px);
+}
+
+#menu-button.open::before {
+  transform: rotate(45deg);
+}
+
+#menu-button.open::after {
+  transform: rotate(-45deg);
+}
+
+#menu-button.open {
+  background-color: transparent;
+}
+
+#menu-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 100%;
+  top: 0;
+  background-color: #2c2e30;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-container.open {
+  left: 0;
+  background-color: #2c2e30;
+}
+
+#menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
