@@ -67,18 +67,10 @@ body {
   background-color: #2c2e30;
   transition: all 0.3s ease-in-out;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
 }
 
 #menu-container.open {
   left: 0;
-  background-color: #2c2e30;
-}
-
-#menu-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
